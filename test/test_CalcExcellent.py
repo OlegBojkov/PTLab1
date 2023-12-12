@@ -45,6 +45,10 @@ class TestCalcExcellent:
 
         return data
 
+    def test_init_calc_excellent(self, input_data_success) -> None:
+        calc_rating = CalcExcellent(input_data_success[0])
+        assert input_data_success[0] == calc_rating.data
+
     def test_success(self, input_data_success: tuple[DataType, str]):
         e = CalcExcellent(input_data_success[0])
         result = e.calc()
