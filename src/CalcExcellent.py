@@ -10,7 +10,6 @@ class CalcExcellent:
         for name, scores in self.data.items():
             for subject, score in scores:
                 if score != 100:
-                    break
+                    return None
             else:
                 return name
-        return None
